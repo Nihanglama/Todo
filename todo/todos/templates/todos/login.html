@@ -1,0 +1,25 @@
+{% extends 'todos/main.html' %}
+{% load static %}
+{% block content %}
+
+
+<div id="login">
+          <h1 style="text-shadow: 1px 1.5px rgb(194, 172, 172);">Login</h1>
+          <form method="POST">
+                    {% csrf_token %}
+                    
+                              {{form.username}}
+                              <br><br>
+                              {{form.password}}
+                              <br>
+                              <br>        
+                              <input type="submit" value="Login" id="buttn">
+          
+          </form>
+          <br><br>
+          <span>Don't have account ?</span>
+          <br>
+          <a href="{% url 'register' %}">Signup</a>
+</div>
+{% endblock %}
+

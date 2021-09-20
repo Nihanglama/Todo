@@ -1,0 +1,16 @@
+{% extends 'todos/main.html' %}
+{% load static %}
+
+{% block content %}
+<div id="view">
+          <h1>{{task.title|title}}</h1>
+          <hr>
+          <span style="text-align:centre;" >{{task.description}}</span>
+          <br>
+          <br><br><br>
+          <a href="{% url 'list' %}"><span class="iconify" data-icon="bx:bx-arrow-back" data-width="50"></span></a>
+
+</div>
+
+{% endblock %}
+

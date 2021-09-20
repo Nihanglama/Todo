@@ -1,0 +1,18 @@
+{% extends 'todos/main.html' %}
+
+{% block content %}
+<form method="POST">
+
+          {% csrf_token %}
+          {{form.as_p}}
+          <input type="submit" value="Signup" >
+
+
+</form>
+
+
+<span>Already have an account?</span>
+<br>
+<a href="{% url 'login' %}">Login</a>
+
+{% endblock %}
