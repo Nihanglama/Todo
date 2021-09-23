@@ -1,3 +1,4 @@
+<!-- {% load static %} -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,10 +7,120 @@
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
           <title>TODO</title>
           
-          {% load static %}
+ 
           
-          <link rel="stylesheet" href="{% static 'main.css' %}">
-          
+          <!-- <link rel="stylesheet" href="{% static 'main.css' %}">
+           -->
+<style>
+          body{
+                    background-image: url("https://images.pexels.com/photos/743986/pexels-photo-743986.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=600&w=1000");
+          }
+          .container{
+                    width: 700px;
+                    margin: 0 auto;
+                    margin-top: 100px;
+                    background-color:#f2e5e5;
+                    -web-box-shadow:2px 2px 13px -4px wheat;
+                    box-shadow: 2px 2px 13px -4px rgb(145, 135, 117);
+                    border: 5px;
+                    border-radius: 5px;
+
+          }
+          #logout{
+                    text-decoration: none;
+                    text-shadow:1px 1.5px white;
+                    text-align: right;
+                    text-overflow: right;
+                    margin-right: 30px;
+                    font-size: larger;
+          }
+          a{
+                    text-decoration: none;
+          }
+
+          h1{
+                    margin-top: 10px;
+                    font-family:fantasy;
+                    font-style: oblique;
+          }
+          #header{
+                    background-color: lightseagreen;
+                    color: white;
+                    border: 6px;
+                    border-radius: 6px;
+                    padding-left: 6px;
+
+          }
+          #view{
+                    text-align: center;
+
+          }
+
+          #login{
+                    margin:0 auto;
+                    text-align: center;
+                    margin-top: 80px;
+                    border: 2px white;
+                    border-radius: 2px white;
+                    border-bottom: white;
+
+          }
+          #buttn{
+                    background-color: rgb(10, 39, 55);
+                    color: white;
+                    border-radius: 50% rgb(179, 75, 144);
+                    font-size: 20px;
+          }
+          #buttn:hover{
+                    background-color: lightseagreen;
+                    color: black;
+          }
+          .text-wrapper{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 20px;
+                    border-top: 1px solid;
+                    font-size: 30px;
+                    font-family: Arial, Helvetica, sans-serif;
+                    color:lightseagreen;
+          }
+
+          .task-title a{
+                    text-decoration: none;
+                    margin-left: 10px;
+                    color:lightseagreen;
+          }
+          .task-title{
+                    display: flex;
+          }
+
+          .complete-circle{
+                    height: 20px;
+                    width: 20px;
+                    background-color: green;
+                    border-radius: 50%;
+          }
+          .incomplete-circle{
+                    height: 20px;
+                    width: 20px;
+                    background-color:lightseagreen;
+                    border-radius: 50%;
+          }
+          #add{
+                    text-align: right;
+                    text-anchor: end;
+                    margin-right: 30px;
+                    font-size: 50px;
+                    margin-top: 0px;
+                    margin-bottom: 0px;
+          }
+          #detail{
+                    margin: 0 auto;
+                    text-align: center;
+          }
+                    
+</style>
           
 </head>
 <body>
@@ -27,4 +138,5 @@
 
           
 </body>
+
 </html>
