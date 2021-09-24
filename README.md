@@ -12,7 +12,7 @@
 
 #pip3/pip install django
 
-#<!-- python3/python makemigration --> optional
+# python3/python makemigration  ----> optional
 
 #python3/python manage.py runserver
 
