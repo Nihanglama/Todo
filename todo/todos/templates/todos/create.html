@@ -1,17 +1,28 @@
 {% extends 'todos/main.html' %}
 
 {% block content %}
-<h1>Forms</h1>
-<a href="{% url 'list' %}">Home</a>
+<div id="header">
+<a href="{% url 'list' %}"><span class="iconify" data-icon="ant-design:home-filled" style="color: black;" data-width="40"></span></a>
+<h3 style="text-align: center; font-size:30px;">Forms</h3>
+<br>
+</div>
+<div id="forms">
+          
+
 
 <form  method="POST">
           {% csrf_token %}
-          {{form.as_p}}
-          <input type="submit" value="Add">
+          <h3>Title</h3>
+          {{form.title}}
+          <h3>Description</h3>
+          {{form.description}}
+<br><br>
+          <input type="submit" value="Add" id="buttn">
+          <br><br>
 
 
 </form>
-
+</div>
 
 {% endblock %}
 

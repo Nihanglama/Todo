@@ -21,6 +21,7 @@ class Login(LoginView):
 class Register(FormView):
           template_name='todos/register.html'
           form_class=UserCreationForm
+          fields=['Username','Password','Password confirmation']
           success_url = reverse_lazy('list')
 
           def form_valid(self, form):
@@ -32,6 +33,7 @@ class Register(FormView):
           def get(self,*args, **kwargs):
                     if self.request.user.is_authenticated:
                               return redirect('list')
+                    return super(Register, self).get(*args, **kwargs)
 
 
 class TaskList(LoginRequiredMixin,ListView):
@@ -65,7 +67,7 @@ class Create(LoginRequiredMixin,CreateView):
           model=Task
           context_object_name='task'
           template_name='todos/create.html'
-          fields=['title','description','complete']
+          fields=['title','description']
           success_url=reverse_lazy('list')
 
           def form_valid(self, form):
@@ -76,7 +78,7 @@ class Update(LoginRequiredMixin,UpdateView):
           model=Task
           context_object_name='task'
           template_name='todos/update.html'
-          fields='__all__'
+          fields=['title','description','complete']
           success_url=reverse_lazy('list')
 
 class Delete(LoginRequiredMixin,DeleteView):

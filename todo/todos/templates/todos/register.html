@@ -1,18 +1,27 @@
+
 {% extends 'todos/main.html' %}
-
 {% block content %}
-<form method="POST">
-
-          {% csrf_token %}
-          {{form.as_p}}
-          <input type="submit" value="Signup" >
 
 
-</form>
+<div id="forms">
+          <h1 id="header">Register</h1>
+    <form method="POST">
+        {% csrf_token %}
+       <h3>Username: {{form.username}}</h3>
+        
+
+        <h3>Password: {{form.password1}}</h3>
+        
+
+        <h3>Confirm Password: {{form.password2}}</h3>
+        
+        <br><br>
+        <input  id="buttn" type="submit" value="Register">
+    </form>
+    <p>Already have an account? <a href="{% url 'login' %}">Login</a></p>
+</div>
 
 
-<span>Already have an account?</span>
-<br>
-<a href="{% url 'login' %}">Login</a>
 
-{% endblock %}
+
+{% endblock content %}

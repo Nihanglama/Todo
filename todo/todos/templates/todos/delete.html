@@ -1,21 +1,22 @@
 {% extends 'todos/main.html' %}
 
 {% block content %}
-
-<a href="{% url 'list' %}">Back</a>
-
+<div id="header">
+<a href="{% url 'list' %}"><span class="iconify" data-icon="ant-design:home-filled" style="color: black;" data-width="40"></span></a>
+          <h3>Delete</h3>
+</div>      
+<div id="forms">
 <form method="POST">
 
           {% csrf_token%}
-          <span>Are you sure you want to delete the follwing task</span>
-          <h1>{{task}}</h1>
-          <a href="{% url 'detail' task.id %}">View</a>
-          <input type="submit" value="Submit">
+          <h3 id="confirm">Are you sure you want to delete {{task}}</h3> 
+          <br>
+          <input type="submit" value="Delete" id="buttn">
 
 
 
 
 </form>
 
-
+</div>
 {% endblock %}
